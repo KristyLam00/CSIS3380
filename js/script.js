@@ -56,12 +56,13 @@ let tempquote;
 function printQuote()
 {
    
-    
-        do{
-        const randquote= getRandomQuote();
-        }while(quotes.indexOf(randquote)!= quotes.indexOf(tempquote));
         //check if the quote selected is not repeated:
         //if the index of randquote is not same as the index of last array stored in tempquote
+        // the loop won't not run again
+        do{
+        const randquote= getRandomQuote();
+        }while(quotes.indexOf(randquote)== quotes.indexOf(tempquote));
+        
         
         //if(quotes.indexOf(randquote)!= quotes.indexOf(tempquote))
        // {
