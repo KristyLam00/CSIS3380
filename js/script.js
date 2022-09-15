@@ -56,14 +56,15 @@ let tempquote;
 function printQuote()
 {
    
-
+    
+        do{
         const randquote= getRandomQuote();
-
+        }while(quotes.indexOf(randquote)!= quotes.indexOf(tempquote));
         //check if the quote selected is not repeated:
         //if the index of randquote is not same as the index of last array stored in tempquote
         
-        if(quotes.indexOf(randquote)!= quotes.indexOf(tempquote))
-        {
+        //if(quotes.indexOf(randquote)!= quotes.indexOf(tempquote))
+       // {
             //select the tag with 'quote' class
             //set the text inside the <p></p> is the selected quote
             const pquote= document.querySelector('.quote')
@@ -87,12 +88,12 @@ function printQuote()
             }
 
 
-        }
-        else //if the index of randquote is same as the index of last array stored in tempquote
+        //}
+       // else //if the index of randquote is same as the index of last array stored in tempquote
             // run the function again
-        {
-            printQuote();
-        }
+       // {
+            //printQuote();
+      //  }
         
 
         tempquote=randquote;
